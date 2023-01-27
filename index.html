@@ -1,0 +1,239 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Internet Engineering Course</title>
+    <link rel="icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- PART 6: MENU -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn">
+      <img src="img/menu-icon.png" class="menu-icon" />
+    </label>
+    
+    <div class="menu">
+      <ul>
+        <li><a href="#start">01&nbsp;&nbsp;START</a></li>
+        <li><a href="#course-lectures">02&nbsp;&nbsp;COURSE LECTURES</a></li>
+        <li><a href="#related-books">03&nbsp;&nbsp;RELATED BOOKS</a></li>
+      </ul>
+    </div>
+   
+    <div class="main">
+      <!-- PART 2: HEADER -->
+      <header class="header" id="start">
+        <div class="title">
+          INTERNET
+          <br/>
+          ENGINEERING
+        </div>
+        <br />
+        <div class="description">
+          IS WHAT WE ARE GOING TO <Br/>
+          LEARN IN THIS COURSE
+        </div>
+        <a class="header-btn" href="#related-books">SEE THE COURSE RELATED BOOKS</a>
+      </header>
+      <!-- PART 3: LECTURES -->
+      <div class="lectures" id="course-lectures">
+        <div class="lcard-container">
+          <!-- HTTP -->
+          <div class="lcard">
+            <img src="img/http-icon.png" />
+            <div class="lcard-title">HTTP</div>
+            <div>The Hypertext Transfer Protocol is an application layer protocol.
+              Communication between client and web servers is done by sending HTTP
+              Requests and receiving HTTP Responses.
+            </div>
+          </div>
+      
+          <!-- HTML CSS -->
+          <div class="lcard">
+            <img src="img/css-icon.png" />
+            <div class="lcard-title">HTML CSS</div>
+            <div>HTML (HyperText Markup Language) is the standard markup language
+              for Web pages. CSS is the language we use to style an HTML document.
+              CSS describes how HTML elements should be displayed.</div>
+          </div>
+      
+          <!-- Javascript-->
+          <div class="lcard">
+            <img src="img/js-icon.png" />
+            <div class="lcard-title">JAVASCRIPT</div>
+            <div>JavaScript is the programming language of the Web. JavaScript
+              often abbreviated to JS id a lightweight, interpreted, or just-in-time
+              compiled programming language with first-class functions.</div>
+          </div>
+      
+          <!-- Golang -->
+          <div class="lcard">
+            <img src="img/go-icon.png" />
+            <div class="lcard-title">GOLANG</div>
+            <div>Go language is a programming language initially developed at Google.
+              It is a statically-typed language having syntax similar to that of C.
+              Go is used to create computer programs.</div>
+          </div>
+        </div>
+      </div>
+      <!-- PART 4: RELATED BOOKS -->
+      <div class="books" id="related-books">
+        <div class="books-title"><span>MOST POPULAR BOOKS</span></div>
+        <div class="bcard-container">
+      
+          <!-- book 1: JavaScript -->
+          <div class="bcard-wrapper">
+            <div class="bcard">
+              <div class="bcard-front">
+                <div class="bcard-header">
+                  <div class="bcard-img-sec">
+                    <div class="bcard-img-overlay bcard-overlay-js"></div>
+                    <img src="img/Book1-2.png" alt="Javascript" class="bcard-img" />
+                  </div>
+                  <h3 class="bcard-heading">
+                    <span class="bcard-heading-js">JAVASCRIPT GUIDE</span>
+                  </h3>
+                </div>
+                <div class="bcard-details">
+                  <div class="bottom-border">By David Flanagan</div>
+                  <div>Seventh Edition</div>
+                  <div>Published at 2020</div>
+                </div>
+              </div>
+              <div class="bcard-back">
+                <div>32.34 $</div>
+                <a href="#js-book" class="blue-btn">BOOK INFO</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- book 2: React -->
+          <div class="bcard-wrapper">
+            <div class="bcard">
+              <div class="bcard-front">
+                <div class="bcard-header">
+                  <div class="bcard-img-sec">
+                    <div class="bcard-img-overlay bcard-overlay-react"></div>
+                    <img src="img/Book2-2.jpg" alt="React" class="bcard-img" />
+                  </div>
+                  <h3 class="bcard-heading">
+                    <span class="bcard-heading-react">ROAD TO REACT</span>
+                  </h3>
+                </div>
+                <div class="bcard-details">
+                  <div class="bottom-border">By Robin Wieruch</div>
+                  <div>2022 Edition</div>
+                  <div>Published at 2022</div>
+                </div>
+              </div>
+              <div class="bcard-back">
+                <div>29.99 $</div>
+                <a href="#react-book" class="blue-btn">BOOK INFO</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bcard-wrapper">
+            <div class="bcard">
+              <div class="bcard-front">
+                <div class="bcard-header">
+                  <div class="bcard-img-sec">
+                    <div class="bcard-img-overlay bcard-overlay-go"></div>
+                    <img src="img/Book3-2.png" alt="Go" class="bcard-img" />
+                  </div>
+                  <h3 class="bcard-heading">
+                    <span class="bcard-heading-go">INTRODUCING GO</span>
+                  </h3>
+                </div>
+                <div class="bcard-details">
+                  <div class="bottom-border">By Caleb Doxsey</div>
+                  <div>First Edition</div>
+                  <div>Published at 2016</div>
+                </div>
+              </div>
+              <div class="bcard-back">
+                <div>21.49 $</div>
+                <a href="#go-book" class="blue-btn">BOOK INFO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PART 5: FOOTER -->
+      <footer class="footer">
+        <div class="navigation">
+          <span>CLASS INFO</span>
+          <span>CONTACT US</span>
+          <span>PRIVACY POLICY</span>
+          <span>TERMS</span>
+        </div>
+        <div class="page-info">
+          <span>
+            Built by Zohreh Karimi for Internet Engineering course
+            <br/> <br/>
+            ADVANCED HTML & CSS
+          </span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- pop up -->
+    <div class="pop-up" id="js-book">
+      <a href="#related-books" class="close">&Cross;</a>
+      <img src="img/Book1-1.jpg" />
+      <div class="book-info">
+        <h3>Start Reading Now</h3>
+        <div>
+          JavaScript is the programming language of the web and is used by more software developers today than any other
+          programming language. For nearly 25 years this best seller has been the go-to guide for JavaScript programmers.
+          The seventh edition is fully updated to cover the 2020 version of JavaScript, and new chapters cover classes,
+          modules, iterators, generators, Promises, async/await, and metaprogramming. You’ll find illuminating and engaging
+          example code throughout.
+          This book is for programmers who want to learn JavaScript and for web developers who want to take their
+          understanding and mastery to the next level.
+        </div>
+        <a href="https://www.amazon.com/gp/product/1491952024/" target="_blank" class="blue-btn"> BUY NOW </a>
+      </div>
+    </div>
+
+    <div class="pop-up" id="react-book">
+      <a href="#related-books" class="close">&Cross;</a>
+      <img src="img/Book2-1.jpg" />
+      <div class="book-info">
+        <h3>Start Reading Now</h3>
+        <div>
+          In "The Road to React" you will learn about all the fundamentals of React.js with Hooks while building a full-blown
+          React application step by step. While you create the React application, every chapter will introduce you to a new React
+          key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with
+          TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side
+          searching. At the end of the book, you will have a fully working deployed React application.
+        </div> 
+        <a href="https://www.amazon.com/gp/product/1491952024/" target="_blank" class="blue-btn"> BUY NOW </a>
+      </div>
+    </div>
+
+    <div class="pop-up" id="go-book">
+      <a href="#related-books" class="close">&Cross;</a>
+      <img src="img/Book3-1.jpg" />
+      <div class="book-info">
+        <h3>Start Reading Now</h3>
+        <div>
+          Perfect for beginners familiar with programming basics, this hands-on guide provides an easy introduction to Go, the
+          general-purpose programming language from Google. Author Caleb Doxsey covers the languageâ??s core features with
+          step-by-step instructions and exercises in each chapter to help you practice what you learn.
+          
+          Go is a general-purpose programming language with a clean syntax and advanced features, including concurrency. This book
+          provides the one-on-one support you need to get started with the language, with short, easily digestible chapters that
+          build on one another. By the time you finish this book, not only will you be able to write real Go programs, you'll be
+          ready to tackle advanced techniques.
+        </div>
+        <a href="https://www.amazon.com/gp/product/1491952024/" target="_blank" class="blue-btn"> BUY NOW </a>
+      </div>
+    </div>
+
+  </body>
+
+</html>

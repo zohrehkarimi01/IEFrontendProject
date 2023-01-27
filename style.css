@@ -1,0 +1,569 @@
+:root {
+  --sec-margin: 20px;
+}
+
+* {
+  font-family: Arial;
+  scroll-behavior: smooth;
+}
+
+.main {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  padding: var(--sec-margin);
+  z-index: -1;
+  width: auto;
+  text-align: center;
+  width: fit-content;
+  color: #202020;
+}
+
+/******************************************/
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  clip-path: circle(25px at calc(100% - 65px) 65px);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.menu ul li {
+  margin: 15px 0;
+}
+
+.menu ul li a {
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.menu ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.menu ul li a:hover {
+  color: #4158d0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* menu button */
+.menu-btn {
+  position: fixed;
+  z-index: 2;
+  right: 35px;
+  top: 40px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  align-content: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn:hover {
+  background-color: RoyalBlue;
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  filter: brightness(0) invert(0.5);
+}
+
+#active:checked~.menu {
+  clip-path: circle(75%);
+}
+
+#active:checked~.menu-btn {
+  background: white;
+}
+
+/* header */
+.header {
+  background: linear-gradient(rgb(12, 94, 202, 0.5), rgb(12, 94, 202, 0.5)),
+      url("img/header.jpg") no-repeat top center scroll;
+  height: 630px;
+  background-size: 100% auto;
+  align-items: center;
+  margin-bottom: var(--sec-margin);
+}
+
+.title{
+  padding-top: 100px;
+  color: white;
+  letter-spacing: 25px;
+  font-size: 70px;
+  text-align: center;
+}
+
+.description{
+  color: white;
+  letter-spacing: 20px;
+  padding: 5px;
+  font-size: 32px;
+  text-align: center;
+}
+
+@keyframes moving {
+  from {
+    left: -600px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes scroll-text {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* #header_container p::after,
+#header_container p::before, */
+.title, .description {
+    animation: scroll-text 3s;
+}
+
+.header-btn {
+  background-color: white;
+  color: rgb(0, 0, 0, 0.7);
+  border: none;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 18px;
+  font-size: 20px;
+  margin-top: 100px;
+  margin: 100px auto;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.header-btn:hover {
+  color: white;
+  background-color: royalblue;
+}
+
+/* lectures */
+.lectures {
+  background: linear-gradient(to bottom right, 
+    rgba(92, 65, 230, 0.5), 
+    rgba(42, 112, 219, 0.5), 
+    rgba(40, 180, 135, 0.5)),
+    url("img/background.jpg") no-repeat top center scroll;
+  height: 570px;
+  padding-top: 50px;
+  margin-bottom: var(--sec-margin);
+}
+
+.lcard-container {
+  min-height: 28rem;
+  max-width: 120rem;
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}
+
+.lcard {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255, 0.7);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: default;
+  padding: 1.75rem;
+}
+
+.lcard:hover {
+  transform: scale(1.1);
+}
+
+.lcard img {
+  width: 90px;
+  padding: 0 2rem;
+  filter: brightness(0) invert(0.3);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.lcard div {
+  padding: 0.5rem 0 0.5rem 0;
+  line-height: 1.6;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.lcard-title {
+  font-weight: bold;
+}
+
+/* related books */
+
+.books {
+  background-color: rgb(247, 247, 247);
+  height: 700px;
+  margin-bottom: var(--sec-margin);
+}
+
+.books-title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  cursor: default;
+  justify-content: center;
+  color: #0371eb;
+}
+
+.books-title span:hover {
+  scale: 1.05;
+  color:rgb(9, 104, 148);
+  transition: transform 0.8s;
+}
+
+.bcard-container {
+  display: flex;
+  padding: 2rem 5rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.bcard-wrapper {
+  background-color: transparent;
+  width: 30%;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.bcard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.bcard-wrapper:hover .bcard {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.bcard-front,
+.bcard-back {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transition: 0.3s all;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.bcard-back {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  transform: rotateY(180deg);
+}
+
+.bcard-back div {
+  color: rgb(52, 52, 52);
+  font-size: 3rem;
+}
+
+.bcard-back button {
+  align-self: center;
+}
+
+.bcard-header {
+  position: relative;
+}
+
+.bcard-img-sec {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+  height: 16rem;
+}
+
+.bcard-heading {
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+  text-align: right;
+  backface-visibility: hidden;
+  position: absolute;
+  bottom: 0.1rem;
+  right: 2rem;
+  width: 65%;
+  z-index: 2;
+}
+
+.bcard-heading span {
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  backface-visibility: hidden;
+  box-decoration-break: clone;
+}
+
+.bcard-heading-js {
+  background-image: linear-gradient(to bottom right,
+      rgba(125, 213, 111, 0.85),
+      rgba(40, 180, 135, 0.85));
+}
+
+.bcard-heading-react {
+  background-image: linear-gradient(to bottom right,
+      rgba(97, 231, 255, 0.85),
+      rgba(42, 112, 219, 0.85));
+}
+
+.bcard-heading-go {
+  background-image: linear-gradient(to bottom right,
+      rgba(131, 109, 226, 0.85), 
+      rgba(92, 65, 230, 0.85));
+}
+
+.bcard-img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.bcard-overlay-js {
+  background-image: linear-gradient(to right bottom,
+      rgba(125, 213, 111, 0.85),
+      rgba(40, 180, 135, 0.85));
+}
+
+.bcard-overlay-react {
+  background-image: linear-gradient(to right bottom,
+      rgba(97, 231, 255, 0.85),
+      rgba(42, 112, 219, 0.85));
+}
+
+.bcard-overlay-go {
+  background-image: linear-gradient(to right bottom,
+      rgba(131, 109, 226, 0.85), 
+      rgba(92, 65, 230, 0.85));
+}
+
+.bcard-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.bcard-details {
+  display: grid;
+  grid-auto-flow: row;
+  padding: 3rem 3rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.bcard-details div{
+  font-size: 20px;
+  color: gray;
+  padding: 1rem;
+}
+
+.bottom-border {
+  border-bottom: 1px solid gray ;
+}
+
+.blue-btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 18px;
+  font-size: 20px;
+  margin: 30px;
+  justify-self: center;
+  text-decoration: none;
+  border: 1px solid royalblue;
+}
+
+.blue-btn:hover {
+  color: rgb(52, 52, 52);
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.footer {
+  margin-bottom: var(--sec-margin);
+  background-color: #333333;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  height: 200px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.navigation {
+  margin-bottom: var(--sec-margin);
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.page-info {
+  margin-bottom: var(--sec-margin);
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.navigation span {
+  border-top: 1px solid gray;
+  padding: 20px 10px 10px 0px;
+}
+
+.navigation span:hover {
+  color: royalblue;
+  cursor: pointer;
+}
+
+.page-info span {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+/* pop up */
+
+.pop-up {
+  display: flex;
+  position: fixed;
+  height: 55vh;
+  width: 50%;
+  z-index: 50;
+  top: 20%;
+  left: 25%;
+  visibility: hidden;
+  transition: all 0.4s;
+  color: white;
+  text-align: justify;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#js-book {
+    background-color: rgb(40, 180, 135);
+}
+
+#react-book {
+    background-color: rgb(42, 112, 219);
+}
+
+#go-book {
+    background-color: rgb(92, 65, 230);
+}
+
+.close,
+.close:link,
+.close:visited {
+  color: #ccc;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 3rem;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.close:hover {
+  color: rgb(140, 32, 32);
+}
+
+.pop-up:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up img {
+  position: relative;
+  left: 0;
+  top: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.book-info {
+  padding: 30px 15px 10px 10px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
